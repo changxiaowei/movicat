@@ -21,7 +21,7 @@
 		var start = ($scope.currentPage - 1 )*count;
 		$scope.total = '';
 		serviceHttp.jsonp(
-			'http://api.douban.com/v2/movie/'+$routeParams.category,
+			'https://api.douban.com/v2/movie/'+$routeParams.category,
 			{count:count,start:start,q:$routeParams.q},
 			function(data){
 				$scope.data = data;
