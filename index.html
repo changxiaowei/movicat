@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+	</head>
+	<body ng-app="movieApp" ng-controller="movieController">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" ng-submit="search()">
+            <input type="text" class="form-control" placeholder="Search..." ng-model="input">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li autofocus><a href="#/in_theaters/1">正在上映 <span class="sr-only">(current)</span></a></li>
+            <li autofocus><a href="#/coming_soon/1">即将上映</a></li>
+            <li autofocus><a href="#/top250/1">top250</a></li>
+            
+          </ul>
+         
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div ng-view></div>
+          
+          
+        </div>
+      </div>
+    </div>
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="movielist/controller.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http/jsonp.js" type="text/javascript" charset="utf-8"></script>
+    <script src="directive/auto.js" type="text/javascript" charset="utf-8"></script>
+    <script src="detail/detail.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

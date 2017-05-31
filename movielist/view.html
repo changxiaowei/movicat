@@ -1,0 +1,43 @@
+<h1>{{title}}</h1>
+<div class="list-group">
+  <a  class="list-group-item" ng-repeat="item in data.subjects" href="#/chang/{{item.id}}">
+    <ul class="media-list">
+	  <li class="media">
+	    <div class="media-left">
+	      
+	        <img class="media-object" ng-src="{{item.images.small}}" alt="{{item.title}}">
+	     
+	    </div>
+	    <div class="media-body">
+	      <h4 class="media-heading">{{item.title}}</h4>
+	      <p>导演：<span ng-repeat="d in item.directors">{{d.name}}</span></p>
+	      <p>类型：{{item.genres.toString()}}</p>
+	      <p>演员：<span ng-repeat="cost in item.casts">{{cost.name}}{{$index?'':'、'}}</span></p>
+	    </div>
+	  </li>
+	</ul>
+
+  </a>
+ 
+</div>
+<div class="mask" ng-show="loading">
+	  <div class="loading">
+	  <h2>pushing pixels</h2>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+</div>
+	
+<div ng-show="!loading">
+
+  <ul class="pager">
+    <li ng-class="{disabled:currentPage<=1}"><a ng-click="go(currentPage - 1)">上一页</a></li>
+    <li ng-class="{disabled:currentPage>=totalPage}"><a ng-click="go(currentPage + 1)">下一页</a></li>
+  </ul>
+
+</div>

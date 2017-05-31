@@ -1,0 +1,19 @@
+{
+  "name": "movicat",
+  "version": "1.0.0",
+  "description": "这是movie的表述",
+  "main": "app.js",
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "bootstrap": "^3.3.7"
+  }
+}
